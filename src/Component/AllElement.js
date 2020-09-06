@@ -43,7 +43,7 @@ const initialval = {
   ext: "123"
 };
 export default function AllElement() {
-  const myStore = useMyStore()
+  // const myStore = useMyStore()
   return (
     <>
       <div className="eft">
