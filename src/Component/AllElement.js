@@ -9,6 +9,7 @@ import {
 } from "@availity/form";
 import { SelectField } from "@availity/select";
 import DateField from "@availity/date";
+import { Phone, validatePhone } from "@availity/phone";
 import { avDate } from "@availity/yup";
 import * as yup from "yup";
 import { Button } from "reactstrap";
@@ -21,7 +22,9 @@ export default function AllElement() {
         appcheck: [],
         justTheInput: undefined,
         appradio: "",
-        dateOfService: ""
+        dateOfService: "",
+        phone: "",
+        ext: ""
       }}
       onSubmit={values => alert(JSON.stringify(values))}
       validationSchema={yup.object().shape({
@@ -29,9 +32,27 @@ export default function AllElement() {
         appcheck: yup.array().required("At least one checkbox is required"),
         justTheInput: yup.string().required("This field is required."),
         appradio: yup.string().required("This field is required"),
-        dateOfService: avDate().required()
+        dateOfService: avDate().required(),
+        phone: yup
+          .string()
+          .isRequired(true),
+        ext: yup.string()
       })}
     >
+      <Phone
+        name="phone"
+        label="Phone"
+        country="US"
+        showExtension={true}
+        phoneColProps={{ xs: { size: 9 } }}
+        extProps={{
+          name: "ext",
+          label: "Ext.",
+          extColProps: {
+            xs: { size: 3 }
+          }
+        }}
+      />
       <DateField
         label="Date of Service"
         id="dateOfService"
