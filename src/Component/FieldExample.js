@@ -14,7 +14,7 @@ export default function FieldExample() {
         hello: yup.string().required()
       })}
     >
-      <Field name="hello" type="text" label="Hello" />
+      <Field name="hello" labelClass="required" inputClass="required" type="text" label="Hello" />
       <Button type="submit" color="primary">
         Submit
       </Button>
