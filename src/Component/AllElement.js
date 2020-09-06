@@ -12,8 +12,7 @@ import DateField from "@availity/date";
 import { Phone, validatePhone } from "@availity/phone";
 import { avDate } from "@availity/yup";
 import AvLink from "@availity/link";
-
-
+import {toJS} from 'mobx'
 import * as yup from "yup";
 import {
   Card,
@@ -23,27 +22,7 @@ import {
   CardBody,
   CardFooter
 } from "reactstrap";
-
-export default function AllElement() {
-
-  return (
-    <>
-      <div className="eft">
-        <Card  >
-          <CardHeader>Header</CardHeader>
-          <CardBody className="eft-body">
-            <Form
-              initialValues={{
-                name: "",
-                appcheck: [],
-                justTheInput: undefined,
-                appradio: "",
-                dateOfService: "",
-                phone: "",
-                ext: ""
-              }}
-              onSubmit={values => alert(JSON.stringify(values))}
-              validationSchema={yup.object().shape({
+const schema = yup.object().shape({
                 name: yup.string().required(),
                 appcheck: yup
                   .array()
@@ -53,7 +32,29 @@ export default function AllElement() {
                 dateOfService: avDate().required(),
                 phone: yup.string().isRequired(true),
                 ext: yup.string()
-              })}
+              })
+ const initialval = {
+                name: "",
+                appcheck: [],
+                justTheInput: undefined,
+                appradio: "",
+                dateOfService: "",
+                phone: "",
+                ext: ""
+              }             
+export default function AllElement() {
+  return (
+    <>
+      <div className="eft">
+        <Card>
+          <CardHeader>Header</CardHeader>
+          <CardBody className="eft-body">
+            <Form
+              initialValues={toJS(initialval)}
+              onSubmit={form => {
+                console.log(form);
+              }}
+              validationSchema={schema}
             >
               <div className="w-100 d-flex flex-row justify-content-around align-items-center">
                 <AvLink href="/public/apps/my-app" target="newBody">
@@ -61,11 +62,18 @@ export default function AllElement() {
                 </AvLink>
               </div>
 
-              {form?
-              'rrr'
-              :
-              'rrr'
-              }
+              {form => {
+                <>
+                  <Button
+                    type="submit"
+                    disabled={!form.isValid}
+                    color="primary"
+                  >
+                    Submit
+                  </Button>
+                </>;
+              }}
+
               <Phone
                 name="phone"
                 label="Phone"
