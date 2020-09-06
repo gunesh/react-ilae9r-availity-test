@@ -23,6 +23,7 @@
     "jquery": "3.5.1",
     "libphonenumber-js": "1.7.57",
     "mobx": "^5.15.6",
+    "mobx-react-lite": "^2.2.1",
     "moment": "2.27.0",
     "node-sass": "^4.14.1",
     "popper.js": "1.16.1",
