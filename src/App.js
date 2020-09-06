@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
-import Field from './Component/Field'
+import FieldExample from './Component/FieldExample'
 
 export default function App() {
   return (
-    <Field />
+    <FieldExample />
   );
 }
