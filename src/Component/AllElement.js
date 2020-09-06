@@ -29,7 +29,7 @@ export default function AllElement() {
   return (
     <>
       <div className="eft">
-        <Card body className="text-center">
+        <Card  >
           <CardHeader>Header</CardHeader>
           <CardBody className="eft-body">
             <Form
