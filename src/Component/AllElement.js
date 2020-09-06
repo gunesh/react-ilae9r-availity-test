@@ -43,7 +43,7 @@ const initialval = {
   ext: "123"
 };
 const AllElement = prop => {
-  // const myStore = useMyStore();
+  const myStore = useMyStore();
   return (
     <>
       <div className="eft">
