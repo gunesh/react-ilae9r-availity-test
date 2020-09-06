@@ -21,7 +21,7 @@ import { Card, Button, CardTitle, CardHeader,CardBody,CardFooter    } from "reac
 export default function AllElement() {
   return (
     <>
-    <div>
+    <div className="eft">
     <Card>
         <CardHeader>Header</CardHeader>
         <CardBody>
