@@ -11,6 +11,7 @@ import { SelectField } from "@availity/select";
 import DateField from "@availity/date";
 import { Phone, validatePhone } from "@availity/phone";
 import { avDate } from "@availity/yup";
+import AvLink from "@availity/link";
 import * as yup from "yup";
 import { Button } from "reactstrap";
 
@@ -33,12 +34,16 @@ export default function AllElement() {
         justTheInput: yup.string().required("This field is required."),
         appradio: yup.string().required("This field is required"),
         dateOfService: avDate().required(),
-        phone: yup
-          .string()
-          .isRequired(true),
+        phone: yup.string().isRequired(true),
         ext: yup.string()
       })}
     >
+      <div className="w-100 d-flex flex-row justify-content-around align-items-center">
+        <AvLink href="/public/apps/my-app" target="newBody">
+          My Application
+        </AvLink>
+      </div>
+
       <Phone
         name="phone"
         label="Phone"
