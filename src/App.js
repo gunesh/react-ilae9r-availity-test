@@ -13,7 +13,7 @@ import TabExample from './Component/TabExample'
 export default function App() {
   return (
     <>
-    <TabExample />
+    <AllElement />
     </>
   );
 }
