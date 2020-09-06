@@ -6,8 +6,8 @@ import CheckboxExample from './Component/CheckboxExample'
 export default function App() {
   return (
     <>
-    
-    <CheckboxExample />
+    <FieldExample />
+     <CheckboxExample />
     </>
   );
 }
