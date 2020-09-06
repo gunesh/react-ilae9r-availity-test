@@ -29,9 +29,9 @@ export default function AllElement() {
   return (
     <>
       <div className="eft">
-        <Card>
+        <Card body className="text-center">
           <CardHeader>Header</CardHeader>
-          <CardBody>
+          <CardBody className="eft-body">
             <Form
               initialValues={{
                 name: "",
@@ -65,7 +65,7 @@ export default function AllElement() {
                 label="Phone"
                 country="US"
                 showExtension={true}
-                phoneColProps={{ xs: { size: 3 } }}
+                phoneColProps={{ xs: { size: 9 } }}
                 extProps={{
                   name: "ext",
                   label: "Ext.",
