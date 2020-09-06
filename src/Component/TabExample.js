@@ -6,6 +6,7 @@ function TabExample() {
   return (
     <div>
       <h4>Tabs Demo</h4>
+      <div className="tab-test">
       <Tabs>
         <div label="Gator">
           See ya later, <em>Alligator</em>!
@@ -17,6 +18,8 @@ function TabExample() {
           Nothing to see here, this tab is <em>extinct</em>!
         </div>
       </Tabs>
+      </div>
+      
     </div>
   );
 }
