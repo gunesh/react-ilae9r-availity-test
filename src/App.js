@@ -1,4 +1,5 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./style.css";
 import FieldExample from './Component/FieldExample'
 import CheckboxExample from './Component/CheckboxExample'
