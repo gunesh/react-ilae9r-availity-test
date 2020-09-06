@@ -86,7 +86,7 @@ export default function AllElement() {
                 labelClass="required"
                 inputClass="required"
                 type="text"
-                size={12}
+                size={3}
                 label="Name"
               />
               <CheckboxGroup name="appcheck" label="Checkbox Group">
