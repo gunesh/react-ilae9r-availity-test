@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Field } from "@availity/form";
 import * as yup from "yup";
-
+import { Button } from "reactstrap";
 
 export default function Field() {
   return (
@@ -15,6 +15,9 @@ export default function Field() {
       })}
     >
       <Field name="hello" type="text" label="Hello" />
+      <Button type="submit" color="primary">
+        Submit
+      </Button>
     </Form>
   );
 }
