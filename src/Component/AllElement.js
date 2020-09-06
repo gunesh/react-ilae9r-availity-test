@@ -18,24 +18,34 @@ export default function AllElement() {
     <Form
       initialValues={{
         name: "",
-        appcheck: "",
+        appcheck: [],
         justTheInput: undefined,
-        appradio: ""
+        appradio: "",
+        dateOfService: ""
       }}
       onSubmit={values => alert(JSON.stringify(values))}
       validationSchema={yup.object().shape({
         name: yup.string().required(),
         appcheck: yup.array().required("At least one checkbox is required"),
         justTheInput: yup.string().required("This field is required."),
-        appradio: yup.string().required("This field is required")
+        appradio: yup.string().required("This field is required"),
+        dateOfService: avDate().required()
       })}
     >
+      <DateField
+        label="Date of Service"
+        id="dateOfService"
+        name="dateOfService"
+        min={{ value: 7, units: "day" }}
+        max={{ value: 7, units: "day" }}
+      />
+
       <Field
         name="name"
         labelClass="required"
         inputClass="required"
         type="text"
-        label="Hello"
+        label="Name"
       />
       <CheckboxGroup name="appcheck" label="Checkbox Group">
         <Checkbox label="Check One" value="uno" />
@@ -57,6 +67,7 @@ export default function AllElement() {
         <Radio label="Radio Two" value="dos" />
         <Radio label="Radio Three" value="tres" />
       </RadioGroup>
+
       <Button type="submit" color="primary">
         Submit
       </Button>
