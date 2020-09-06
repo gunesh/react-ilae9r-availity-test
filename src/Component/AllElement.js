@@ -15,7 +15,7 @@ import AvLink from "@availity/link";
 import { toJS } from "mobx";
 import * as yup from "yup";
 
-import { useMyStore } from '../hooks';
+import { useMyStore } from "../hooks";
 import {
   Card,
   Button,
