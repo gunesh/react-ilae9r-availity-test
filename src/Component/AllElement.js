@@ -15,7 +15,7 @@ import AvLink from "@availity/link";
 import { toJS } from "mobx";
 import * as yup from "yup";
 
-import {useMyStore} from '../kooh'
+import { useMyStore } from '../hooks';
 import {
   Card,
   Button,
@@ -42,8 +42,8 @@ const initialval = {
   phone: "(999)-999-999",
   ext: "123"
 };
-export default function AllElement() {
-  // const myStore = useMyStore()
+const AllElement = prop => {
+  // const myStore = useMyStore();
   return (
     <>
       <div className="eft">
@@ -134,4 +134,5 @@ export default function AllElement() {
       </div>
     </>
   );
-}
+};
+export default AllElement;
