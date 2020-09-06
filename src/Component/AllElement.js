@@ -12,8 +12,7 @@ import DateField from "@availity/date";
 import { Phone, validatePhone } from "@availity/phone";
 import { avDate } from "@availity/yup";
 import AvLink from "@availity/link";
-import PageHeader from "@availity/page-header";
-import { Agreement } from "@availity/typography";
+import { useSpacesContext } from '@availity/spaces';
 
 import * as yup from "yup";
 import {
@@ -26,6 +25,7 @@ import {
 } from "reactstrap";
 
 export default function AllElement() {
+  const { spaces, loading, error } = useSpacesContext();
   return (
     <>
       <div className="eft">

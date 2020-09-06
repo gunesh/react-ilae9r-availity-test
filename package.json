@@ -12,7 +12,7 @@
     "@availity/page-header": "10.0.63",
     "@availity/phone": "1.1.18",
     "@availity/select": "0.15.0",
-    "@availity/spaces": "4.0.26",
+    "@availity/spaces": "^4.0.26",
     "@availity/typography": "^1.2.18",
     "@availity/yup": "3.0.7",
     "@babel/runtime": "7.11.2",
