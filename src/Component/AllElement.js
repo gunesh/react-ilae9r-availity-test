@@ -14,6 +14,8 @@ import { avDate } from "@availity/yup";
 import AvLink from "@availity/link";
 import { toJS } from "mobx";
 import * as yup from "yup";
+
+import {useMyStore} from '../kooh'
 import {
   Card,
   Button,
@@ -41,6 +43,7 @@ const initialval = {
   ext: "123"
 };
 export default function AllElement() {
+  const myStore = useMyStore()
   return (
     <>
       <div className="eft">
