@@ -16,11 +16,17 @@ import PageHeader from "@availity/page-header";
 import { Agreement } from "@availity/typography";
 
 import * as yup from "yup";
-import { Button } from "reactstrap";
+import { Card, Button, CardTitle, CardHeader,CardBody,CardFooter    } from "reactstrap";
 
 export default function AllElement() {
   return (
-    <Form
+    <>
+    <div>
+    <Card>
+        <CardHeader>Header</CardHeader>
+        <CardBody>
+          <CardTitle>Special Title Treatment</CardTitle>
+         <Form
       initialValues={{
         name: "",
         appcheck: [],
@@ -41,15 +47,7 @@ export default function AllElement() {
         ext: yup.string()
       })}
     >
-      <div className="w-100 d-flex flex-column justify-content-around align-items-start">
-        <PageHeader
-          appName="Payer Space"
-          appAbbr="PS"
-          iconColor="blue"
-          feedback
-        />
-      </div>
-
+      
       <div className="w-100 d-flex flex-row justify-content-around align-items-center">
         <AvLink href="/public/apps/my-app" target="newBody">
           My Application
@@ -104,21 +102,17 @@ export default function AllElement() {
         <Radio label="Radio Three" value="tres" />
       </RadioGroup>
 
-      <Agreement>
-        <p>
-          veritatis doloremque ut hic et etvitae amet natus perferendisdolores
-          illum et rerum officia autiste deserunt quis sed corporis explicabo
-          qui non pariaturaccusantium molestias non aut ut utnumquam qui vero
-          est nihil eum ullam autemrerum repellat dicta quae dolorest occaecati
-          sapiente a cupiditatereprehenderit quibusdam nam eveniet voluptatem
-          quis soluta quamdelectus consequatur qui incidunt voluptatem
-          consequuntur
-        </p>
-      </Agreement>
-
+     
       <Button type="submit" color="primary">
         Submit
       </Button>
     </Form>
+        </CardBody>
+        <CardFooter>Footer</CardFooter>
+      </Card>
+
+    </div>
+    </>
+    
   );
 }
