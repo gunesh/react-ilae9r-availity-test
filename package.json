@@ -1,6 +1,6 @@
 {
   "name": "react",
- "version": "0.0.0",
+  "version": "0.0.0",
   "private": true,
   "dependencies": {
     "@availity/api-axios": "^3.0.1",
@@ -11,7 +11,7 @@
     "@availity/phone": "1.1.18",
     "@availity/select": "^0.15.0",
     "@availity/yup": "3.0.7",
-    "availity-reactstrap-validation": "2.6.1",
+    "availity-reactstrap-validation": "^2.6.1",
     "axios": "^0.19.2",
     "formik": "2.1.5",
     "libphonenumber-js": "1.7.57",
