@@ -54,7 +54,7 @@ const AllElement = prop => {
               initialValues={toJS(initialval)}
               onSubmit={form => {
                 console.log(form);
-                //myStore.submitMyForm(form)
+                myStore.submitMyForm(form)
               }}
               validationSchema={schema}
             >
