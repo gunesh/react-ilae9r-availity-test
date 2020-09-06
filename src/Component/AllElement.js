@@ -12,7 +12,7 @@ import DateField from "@availity/date";
 import { Phone, validatePhone } from "@availity/phone";
 import { avDate } from "@availity/yup";
 import AvLink from "@availity/link";
-import {toJS} from 'mobx'
+import { toJS } from "mobx";
 import * as yup from "yup";
 import {
   Card,
@@ -23,25 +23,23 @@ import {
   CardFooter
 } from "reactstrap";
 const schema = yup.object().shape({
-                name: yup.string().required(),
-                appcheck: yup
-                  .array()
-                  .required("At least one checkbox is required"),
-                justTheInput: yup.string().required("This field is required."),
-                appradio: yup.string().required("This field is required"),
-                dateOfService: avDate().required(),
-                phone: yup.string().isRequired(true),
-                ext: yup.string()
-              })
- const initialval = {
-                name: "",
-                appcheck: [],
-                justTheInput: undefined,
-                appradio: "",
-                dateOfService: "",
-                phone: "",
-                ext: ""
-              }             
+  name: yup.string().required(),
+  appcheck: yup.array().required("At least one checkbox is required"),
+  justTheInput: yup.string().required("This field is required."),
+  appradio: yup.string().required("This field is required"),
+  dateOfService: avDate().required(),
+  phone: yup.string().isRequired(true),
+  ext: yup.string()
+});
+const initialval = {
+  name: "aaa",
+  appcheck: ["tres"],
+  justTheInput: 1,
+  appradio: "dos",
+  dateOfService: "2020-09-06",
+  phone: "(999)-999-999",
+  ext: "123"
+};
 export default function AllElement() {
   return (
     <>
