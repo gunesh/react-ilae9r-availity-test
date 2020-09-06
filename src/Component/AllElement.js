@@ -54,14 +54,13 @@ export default function AllElement() {
               }}
               validationSchema={schema}
             >
-              <div className="w-100 d-flex flex-row justify-content-around align-items-center">
-                <AvLink href="/public/apps/my-app" target="newBody">
-                  My Application
-                </AvLink>
-              </div>
-
               {form => {
                 <>
+                  <div className="w-100 d-flex flex-row justify-content-around align-items-center">
+                    <AvLink href="/public/apps/my-app" target="newBody">
+                      My Application
+                    </AvLink>
+                  </div>
                   <Button
                     type="submit"
                     disabled={!form.isValid}

@@ -7,11 +7,13 @@ import CheckboxExample from './Component/CheckboxExample'
 import DateExample from './Component/DateExample'
 import SelectFieldExample from './Component/SelectFieldExample'
 import AllElement from './Component/AllElement'
+import TabExample from './Component/TabExample'
+
 
 export default function App() {
   return (
     <>
-    <AllElement />
+    <TabExample />
     </>
   );
 }
